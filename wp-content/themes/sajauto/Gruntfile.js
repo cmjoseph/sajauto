@@ -126,14 +126,14 @@ module.exports = function(grunt) {
           'assets/sass/*.scss',
           'assets/sass/**/*.scss'
         ],
-        tasks: ['sass:dev', 'autoprefixer:dev']
+         tasks: ['sass:dev', 'autoprefixer:dev', 'sass:build', 'autoprefixer:build']
       },
       js: {
         files: [
           jsFileList,
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint', 'concat']
+        tasks: ['jshint', 'concat', 'uglify']
       },
       livereload: {
         // Browser live reloading
