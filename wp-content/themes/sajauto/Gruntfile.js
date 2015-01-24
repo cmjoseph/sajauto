@@ -133,7 +133,7 @@ module.exports = function(grunt) {
           jsFileList,
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint', 'concat', 'uglify']
+        tasks: ['jshint', 'uglify']
       },
       livereload: {
         // Browser live reloading
@@ -145,6 +145,7 @@ module.exports = function(grunt) {
           'assets/css/main.css',
           'assets/js/scripts.js',
           'templates/*.php',
+          'sajauto/*.php',
           '*.php'
         ]
       }
