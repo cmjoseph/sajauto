@@ -1,1 +1,79 @@
-.banner { }
+header.banner{
+	margin-bottom: 0;
+	div.container{
+		background: black;
+		padding-top: 15px;
+		padding-bottom: 25px;
+		div.logo{
+			button{
+				i{
+					color: $saj-yellow;
+					font-size: 2em;
+				}
+			}
+			a.navbar-brand{
+				display: table;
+				float: none;
+			}
+		}
+		div.slogan{
+			text-align: right;
+			color: white;
+			a.number{
+				display: inline-block;
+				font-weight: bold;
+				color: white;
+				margin: 0;
+				h1{
+					margin: 0;
+				}
+				&:hover{
+					transition: all 0.25s;
+					color: $saj-turq;
+				}
+			}
+			@media #{$mobile}{
+				text-align: center;
+				h1, a{
+					transition: all 0.25s;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	div.menu{
+		overflow: hidden;
+		div.container{
+			background: none;
+			padding: 0;
+			@media #{$mobile}{
+				background: black;
+			}
+			nav{
+				box-shadow: none;
+				ul{
+					width: 100%;
+					@media #{$mobile}{
+						margin: 0;
+					}
+					li{
+						text-align: center;
+						width: 25%;
+						@media #{$mobile}{
+							width: 100%;
+						}
+						a{
+							font-size: 22px;
+							color: $saj-yellow;
+							&:hover{
+								transition: all 0.25s;
+								background: $saj-yellow;
+								color: black;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

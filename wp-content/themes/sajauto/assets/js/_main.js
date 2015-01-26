@@ -23,6 +23,20 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      function get_window_Height(padding){
+        var headerH = $('header').height();
+        var footerH = $('footer').height();
+        var windowH = $(window).height();
+        var contentH = windowH - (headerH + footerH + padding);
+        $('#wrap').css('min-height',contentH);
+      }
+
+      get_window_Height(30);
+
+      $(window).on('resize', function(){ 
+        get_window_Height(30);
+      });
+
     }
   },
   // Home page

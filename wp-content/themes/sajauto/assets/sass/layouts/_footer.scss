@@ -1,1 +1,47 @@
-.content-info { }
+footer.content-info{
+	position: relative;
+	bottom: 0;
+	@media #{$mobile} {
+		bottom: -30px;
+	}
+	div.container{
+		background: black;
+		padding: 15px;
+		div.left{
+			@include make-sm-column(6);
+			padding: 0;
+			color: $saj-yellow;
+			font-weight: bold;
+			a{
+				color: white;
+				&:hover{
+					transition: all 0.25s;
+					color: $saj-turq;
+				}
+			}
+			@media #{$mobile} {
+				transition: all 0.25s;
+				text-align: center;
+				margin-bottom: 15px;
+				h3{
+					transition: all 0.25s;
+					font-size: 18px;
+				}
+			}
+		}
+		div.right{
+			@include make-sm-column(6);
+			padding: 0;
+			text-align: right;
+			color: white;
+			@media #{$mobile} {
+				transition: all 0.25s;
+				text-align: center;
+				h3, h4{
+					transition: all 0.25s;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
