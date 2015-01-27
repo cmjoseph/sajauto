@@ -1,0 +1,44 @@
+section#intro{
+	div.inner{
+		div.left{
+			@include make-sm-column(4);
+			padding: 0;
+			h2{
+				margin-bottom: 15px;
+			}
+			p{
+				font-size: 22px;
+			}
+		}
+		div.right{
+			@include make-sm-column(8);
+			padding: 0;
+		}
+	}
+}
+
+section#nouveau{
+	position: relative;
+	h2{
+		margin-bottom: 15px;
+	}
+	div.owl-carousel{
+		div.box{
+			position: relative;
+			div.item{
+				div.sub-info{
+					padding: 15px;
+					background: $saj-grey;
+				}
+			}
+		}
+		div.owl-controls{
+			position: absolute;
+			top: -50px;
+			right: 0;
+			@media #{$mobile}{
+				display: none;
+			}
+		}
+	}
+}

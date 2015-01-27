@@ -11,7 +11,6 @@ footer.content-info{
 			@include make-sm-column(6);
 			padding: 0;
 			color: $saj-yellow;
-			font-weight: bold;
 			a{
 				color: white;
 				&:hover{

@@ -9,6 +9,16 @@ body{
 	margin-top: -1px;
 }
 
+section{
+	background: black;
+	padding: 15px;
+	color: white;
+	margin-bottom: 15px;
+	h2{
+		color: $saj-yellow;
+	}
+}
+
 div.inner-body{
 	padding: 15px 0;
 	@media #{$mobile}{
@@ -21,7 +31,364 @@ h2, h3, h4, h5, h6{
 }
 
 a{
-	&:hover{
+	outline: 0;
+	&:hover, &:focus{
 		text-decoration: none;
+		outline: 0;
 	}
 }
+
+// Plugins
+
+
+// Slider -------------------------------------------------------------------------------------------------------
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+.rslides p.caption {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  text-shadow: none;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  margin: 0;
+  max-width: none;
+  }
+
+.rslides_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 52%;
+  left: 0;
+  opacity: 0.7;
+  z-index: 3;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("../img//themes.gif") no-repeat left top;
+  margin-top: -45px;
+  }
+
+.rslides_nav:active {
+  opacity: 1.0;
+  }
+
+.rslides_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0;
+  }
+
+  // Carousel ----------------------------------------------------------------------------------
+
+$color-base:			#869791;
+$color-white:			#FFF;
+$color-gray:			#D6D6D6;
+
+//nav
+
+$nav-color: 			$color-white;
+$nav-color-hover:		$color-white;
+$nav-font-size: 		14px;
+$nav-rounded: 			3px;
+$nav-margin: 			5px;
+$nav-padding: 			4px 7px;
+$nav-background: 		$color-gray;
+$nav-background-hover:	$color-base;
+$nav-disabled-opacity: 	0.5;
+
+//dots
+
+$dot-width:				10px;
+$dot-height:			10px;
+$dot-rounded:			30px;
+$dot-margin: 			5px 7px;
+$dot-background:		$color-gray;
+$dot-background-active:	$color-base;
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+
+ @mixin transition($prop, $time, $easing){
+	-webkit-transition: $prop $time $easing;
+	-moz-transition: $prop $time $easing;
+	-ms-transition: $prop $time $easing;
+	-o-transition: $prop $time $easing;
+	transition: $prop $time $easing;
+}
+
+@mixin rounded($value){
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+@mixin transform($prop){
+	-webkit-transition: $prop;
+	-moz-transition: $prop;
+	-ms-transition: $prop;
+	-o-transition: $prop;
+	transition: $prop;
+}
+
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+
+.owl-theme {
+	// Styling Next and Prev buttons
+	.owl-nav {
+		margin-top: 10px;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+		
+		[class*='owl-'] {
+			color: $saj-yellow;
+			font-size: $nav-font-size;
+			margin: $nav-margin;
+			padding: $nav-padding;
+			background: $nav-background;
+			display: inline-block;
+			cursor: pointer;
+			@include rounded($nav-rounded);
+
+			&:hover {
+				background: $nav-background-hover;
+				color:$nav-color-hover;
+				text-decoration: none;
+			}
+		}
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+	.owl-dots {
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+		
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+
+			span {
+				width: $dot-width;
+				height: $dot-height;
+				margin: $dot-margin;
+				background: white;
+				display: block;
+				-webkit-backface-visibility: visible;
+				@include transition(opacity, 200ms, ease);
+				@include rounded($dot-rounded);
+			}
+
+			&.active,
+			&:hover {
+				span {
+					background: $saj-yellow;
+				}
+			}
+		}
+	}
+}
+
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel{
+	.animated {
+		-webkit-animation-duration: 1000ms;
+		animation-duration: 1000ms;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+	.owl-animated-in {
+		z-index: 0;
+	}
+	.owl-animated-out {
+		z-index: 1;
+	}
+	.fadeOut {
+		-webkit-animation-name: fadeOut;
+		animation-name: fadeOut;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+	display: none;
+	width: 100%;
+	-webkit-tap-highlight-color: transparent;
+	/* position relative and z-index fix webkit rendering fonts issue */
+	position: relative;
+	z-index: 1;
+	
+	.owl-stage {
+		position: relative;
+		-ms-touch-action: pan-Y;
+	}
+
+	.owl-stage:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+
+	.owl-stage-outer {
+		position: relative;
+		overflow: hidden;
+		/* fix for flashing background */
+		-webkit-transform: translate3d(0px, 0px, 0px);
+	}
+	
+	.owl-item {
+		position: relative;
+		min-height: 1px;
+		float: left;
+		-webkit-backface-visibility: hidden;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+	}
+	.owl-item img {
+		display: block;
+		width: 100%;
+		-webkit-transform-style: preserve-3d;
+	}
+	
+	.owl-nav.disabled,
+	.owl-dots.disabled {
+		display: none;
+	}
+
+	.owl-nav .owl-prev,
+	.owl-nav .owl-next,
+	.owl-dot {
+		cursor: pointer;
+		cursor: hand;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	&.owl-loaded {
+		display: block;
+	}
+
+	&.owl-loading {
+		opacity: 0;
+		display: block;
+	}
+
+	&.owl-hidden {
+		opacity: 0;
+	}
+
+	&.owl-refresh .owl-item {
+		display: none;
+	}
+	
+	&.owl-drag .owl-item {
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	&.owl-grab {
+		cursor: move;
+		cursor: -webkit-grab;
+		cursor: -o-grab;
+		cursor: -ms-grab;
+		cursor: grab;
+	}
+
+	&.owl-rtl {
+		direction: rtl;
+	}
+
+	&.owl-rtl .owl-item {
+		float: right;
+	}
+}
+
+/* No Js */
+.no-js .owl-carousel {
+	display: block;
+}
+

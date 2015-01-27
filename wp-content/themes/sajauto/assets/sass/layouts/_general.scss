@@ -9,6 +9,7 @@
 // Main content area
 .main {
   @include make-sm-column($main-sm-columns);
+  padding: 0;
   .sidebar-primary & {
     @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
   }

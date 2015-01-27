@@ -31,8 +31,10 @@ var Roots = {
         $('#wrap').css('min-height',contentH);
       }
 
+      // Get window height with padding
       get_window_Height(30);
 
+      // Get window height on resize with padding
       $(window).on('resize', function(){ 
         get_window_Height(30);
       });
@@ -43,6 +45,19 @@ var Roots = {
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+      $(".rslides").responsiveSlides({
+        nav: true,
+        pauseControls: true
+      });
+
+      $("#owl-example").owlCarousel({
+        autoplay: true,
+        autoplayHoverPause: true,
+        margin: 15,
+        items: 4,
+        loop: true,
+        dots: true
+      });
     }
   },
   // About us page, note the change from about-us to about_us.
