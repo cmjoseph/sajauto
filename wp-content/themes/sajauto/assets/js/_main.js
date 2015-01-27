@@ -54,9 +54,25 @@ var Roots = {
         autoplay: true,
         autoplayHoverPause: true,
         margin: 15,
-        items: 4,
         loop: true,
-        dots: true
+        responsive:{
+        0:{
+            items:1,
+            dots:false
+        },
+        320:{
+            items:2,
+            dots:false
+        },
+        768:{
+            items:3,
+            dots:false
+        },
+        991:{
+            items:4,
+            dots:true
+        }
+    }
       });
     }
   },
