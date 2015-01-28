@@ -1,0 +1,54 @@
+section#cars{
+	div.vehicules{
+		margin: 0 -7.5px;
+		div.car{
+			@include container-fixed(3);
+			@include make-sm-column(3);
+			margin-top: 15px;
+			max-height: 304px;
+			overflow: hidden;
+			a.box{
+				display: block;
+				position: relative;
+				div.cover{
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					min-height: 100%;
+					background: rgba(205,255,3,0.2);
+					z-index: 99;
+					&:hover{
+						transition: all 0.25s;
+						opacity: 1;
+					}
+				}
+				div.car-pic{
+					overflow: hidden;
+					max-height: 210px;
+					img{
+						min-height: 210px;
+						width: 100%;
+					}
+				}
+				div.caption{
+					padding: 15px;
+					color: white;
+					background: $saj-grey;
+					h4{
+						margin-bottom: 10px;
+						font-size: 16px;
+					}
+					p{
+						font-size: 18px;
+						color: $saj-turq;
+						&:after{
+							content: " $";
+						}
+					}
+				}
+			}
+		}
+	}
+}

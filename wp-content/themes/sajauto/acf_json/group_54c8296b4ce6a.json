@@ -1,0 +1,363 @@
+{
+    "key": "group_54c8296b4ce6a",
+    "title": "Inventaire",
+    "fields": [
+        {
+            "key": "field_54c83955472fe",
+            "label": "Images du v\u00e9hicule",
+            "name": "images_du_vehicule",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "block",
+            "button_label": "Ajouter des images",
+            "sub_fields": [
+                {
+                    "key": "field_54c8397d472ff",
+                    "label": "Images",
+                    "name": "images",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
+                }
+            ]
+        },
+        {
+            "key": "field_54c8298e7d64e",
+            "label": "Marque",
+            "name": "marque",
+            "prefix": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Acura": "Acura",
+                "Audi": "Audi",
+                "BMW": "BMW",
+                "Buick": "Buick",
+                "Cadillac": "Cadillac",
+                "Chevrolet": "Chevrolet",
+                "Chrysler": "Chrysler",
+                "Corvette": "Corvette",
+                "Dodge": "Dodge",
+                "Fiat": "Fiat",
+                "Ford": "Ford",
+                "GMC": "GMC",
+                "Honda": "Honda",
+                "Hummer": "Hummer",
+                "Hyundai": "Hyundai",
+                "Infiniti": "Infiniti",
+                "Isuzu": "Isuzu",
+                "Jaguar": "Jaguar",
+                "Jeep": "Jeep",
+                "Kia": "Kia",
+                "Land Rover": "Land Rover",
+                "Lexus": "Lexus",
+                "Lincoln": "Lincoln",
+                "Mazda": "Mazda",
+                "Mercedes-Benz": "Mercedes-Benz",
+                "Mini": "Mini",
+                "Mitsubishi": "Mitsubishi",
+                "Nissan": "Nissan",
+                "Peugeot": "Peugeot",
+                "Pontiac": "Pontiac",
+                "Porsche": "Porsche",
+                "Ram": "Ram",
+                "Renault": "Renault",
+                "Saab": "Saab",
+                "Saturn": "Saturn",
+                "Scion": "Scion",
+                "Smart": "Smart",
+                "Subaru": "Subaru",
+                "Suzuki": "Suzuki",
+                "Toyota": "Toyota",
+                "Volkswagen": "Volkswagen",
+                "Volvo": "Volvo"
+            },
+            "default_value": {
+                "Acura": "Acura",
+                "Audi": "Audi",
+                "BMW": "BMW",
+                "Buick": "Buick",
+                "Cadillac": "Cadillac",
+                "Chevrolet": "Chevrolet",
+                "Chrysler": "Chrysler",
+                "Corvette": "Corvette",
+                "Dodge": "Dodge",
+                "Fiat": "Fiat",
+                "Ford": "Ford",
+                "GMC": "GMC",
+                "Honda": "Honda",
+                "Hummer": "Hummer",
+                "Hyundai": "Hyundai",
+                "Infiniti": "Infiniti",
+                "Isuzu": "Isuzu",
+                "Jaguar": "Jaguar",
+                "Jeep": "Jeep",
+                "Kia": "Kia",
+                "Land Rover": "Land Rover",
+                "Lexus": "Lexus",
+                "Lincoln": "Lincoln",
+                "Mazda": "Mazda",
+                "Mercedes-Benz": "Mercedes-Benz",
+                "Mini": "Mini",
+                "Mitsubishi": "Mitsubishi",
+                "Nissan": "Nissan",
+                "Peugeot": "Peugeot",
+                "Pontiac": "Pontiac",
+                "Porsche": "Porsche",
+                "Ram": "Ram",
+                "Renault": "Renault",
+                "Saab": "Saab",
+                "Saturn": "Saturn",
+                "Scion": "Scion",
+                "Smart": "Smart",
+                "Subaru": "Subaru",
+                "Suzuki": "Suzuki",
+                "Toyota": "Toyota",
+                "Volkswagen": "Volkswagen",
+                "Volvo": "Volvo"
+            },
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "key": "field_54c82dc7e7caa",
+            "label": "Ann\u00e9e",
+            "name": "annee",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Entrer l'ann\u00e9e du v\u00e9hicule",
+            "prepend": "",
+            "append": "",
+            "maxlength": 4,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54c82e56e7cab",
+            "label": "Prix",
+            "name": "prix",
+            "prefix": "",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Entrer le prix du v\u00e9hicule",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 100000,
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54c83c2f70b62",
+            "label": "Kilom\u00e8trage",
+            "name": "kilometrage",
+            "prefix": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Km",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 400000,
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54c83b3128c61",
+            "label": "Description du v\u00e9hicule",
+            "name": "description_du_vehicule",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Ajouter des options",
+            "sub_fields": [
+                {
+                    "key": "field_54c83b5028c62",
+                    "label": "Accessoires et options",
+                    "name": "options",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Entrer un accessoire ou option",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_54c83bba79400",
+            "label": "S\u00e9curit\u00e9 du v\u00e9hicule",
+            "name": "securite_du_vehicule",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Ajouter des options de s\u00e9curit\u00e9",
+            "sub_fields": [
+                {
+                    "key": "field_54c83bdc79401",
+                    "label": "Options de s\u00e9curit\u00e9",
+                    "name": "options_de_securite",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_54c83c7d70b63",
+            "label": "V\u00e9hicule en vedette",
+            "name": "en_vedette",
+            "prefix": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
+            "key": "field_54c83caa70b64",
+            "label": "V\u00e9hicule vendu",
+            "name": "vehicule_vendu",
+            "prefix": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "modified": 1422415668
+}
