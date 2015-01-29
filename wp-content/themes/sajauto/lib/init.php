@@ -32,6 +32,13 @@ function roots_setup() {
 }
 add_action('after_setup_theme', 'roots_setup');
 
+add_action('after_setup_theme', 'my_image_sizes');
+
+function my_image_sizes() {
+  add_image_size( 'mobile', 300, 160, true );
+  add_image_size( 'desktop', 750, 400, true );
+}
+
 /**
  * Register sidebars
  */

@@ -16,6 +16,9 @@ section{
 	margin-bottom: 15px;
 	h2{
 		color: $saj-yellow;
+		@media #{$mobile}{
+			font-size: 20px;
+		}
 	}
 }
 

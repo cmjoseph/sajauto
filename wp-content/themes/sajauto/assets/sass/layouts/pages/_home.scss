@@ -1,18 +1,71 @@
 section#intro{
 	div.inner{
 		div.left{
-			@include make-sm-column(4);
-			padding: 0;
+			@include make-md-column(4);
+			padding-left: 0;
+			padding-right: 15px;
 			h2{
 				margin-bottom: 15px;
 			}
 			p{
 				font-size: 22px;
+				@media #{$tablet}{
+					font-size: 20px;
+				}
 			}
 		}
 		div.right{
-			@include make-sm-column(8);
+			@include make-md-column(8);
 			padding: 0;
+			ul.rslides{
+				li{
+					position: relative;
+					overflow: hidden;
+					max-height: 400px;
+					max-width: 750px;
+					@media #{$mobile}{
+						max-height: 160px;
+						max-width: 100%;
+					}
+					a{
+						display: block;
+						img{
+							min-height: 400px;
+							@media #{$mobile}{
+								min-height: inherit;
+							}
+						}
+					}
+					p.caption{
+						@media #{$mobile}{
+							font-size: 15px;
+							padding: 5px;
+						}
+						span{
+							color: $saj-yellow;
+							&:after{
+								content: " $";
+							}
+						}
+					}
+				}
+			}
+			a.rslides_nav{
+				@media #{$mobile}{
+					display: none;
+				}
+			}
+		}
+		div.mobile{
+			display: none;
+			@media #{$mobile}{
+				display: block;
+			}
+			margin-top: 15px;
+			text-align: center;
+			h2{
+				padding-bottom: 15px;
+			}
 		}
 	}
 }
@@ -26,9 +79,31 @@ section#nouveau{
 		div.box{
 			position: relative;
 			div.item{
+				position: relative;
+				max-width: 270px;
+				@media #{$mobile}{
+					max-width: 100%;
+				}
+				max-height: 184px;
+				overflow: hidden;
+				a{
+					display: block;
+					max-height: 184px;
+					overflow: hidden;
+					img{
+						width: 100%;
+						min-height: 184px;
+					}
+				}
 				div.sub-info{
+					@media #{$mobile}{
+						padding: 5px;
+					}
+					position: absolute;
+					bottom: 0;
+					width: 100%;
 					padding: 15px;
-					background: $saj-grey;
+					background: rgba(17,17,17,0.9);
 				}
 			}
 		}
@@ -38,6 +113,36 @@ section#nouveau{
 			right: 0;
 			@media #{$mobile}{
 				display: none;
+			}
+		}
+	}
+}
+
+section#visit{
+	position: relative;
+	div.inner{
+		div.left{
+			@include make-sm-column(8);
+			padding-left: 0;
+			padding-right: 15px;
+			h2{
+				margin-bottom: 15px;
+			}
+			p{
+				font-size: 22px;
+				@media #{$mobile}{
+					font-size: 14px;
+				}
+				@media #{$tablet}{
+					font-size: 18px;
+				}
+			}
+		}
+		div.right{
+			@include make-sm-column(4);
+			padding: 0;
+			img{
+				width: 100%;
 			}
 		}
 	}

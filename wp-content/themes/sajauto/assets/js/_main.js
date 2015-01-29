@@ -39,6 +39,9 @@ var Roots = {
         get_window_Height(30);
       });
 
+      // TweenLite.to($("#preloader"), .8,{css:{autoAlpha:0},delay:.4})
+      // TweenLite.set($("#preloader"),{css:{display:"block"},delay:1.1});
+
     }
   },
   // Home page
@@ -56,11 +59,11 @@ var Roots = {
         margin: 15,
         loop: true,
         responsive:{
-        0:{
+        320:{
             items:1,
             dots:false
         },
-        320:{
+        568:{
             items:2,
             dots:false
         },
