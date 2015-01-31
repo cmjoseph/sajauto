@@ -34,7 +34,7 @@ Template Name: Home Template
 </section>
 
 <section id="nouveau">
-	<div class="inner">
+	<div class="inner clearfix">
 		<h2><?php echo __('Nouveautés','sajauto')?></h2>
 		<div id="owl-example" class="owl-carousel">
 			<?php 

@@ -1,0 +1,94 @@
+section#vehicule{
+	article{
+		div.car-left{
+			@include make-md-column(7);
+			padding: 0;
+			ul.rslides{
+				max-height: 435px;
+				overflow: hidden;
+			}
+			ul.thumbnails{
+				padding: 0;
+				margin: 0 -7.5px;
+				max-height: 157px;
+				overflow: hidden;
+				li{
+					@include make-xs-column(6);
+					@include make-sm-column(4);
+					list-style-type: none;
+					margin-top: 15px;
+					img{
+						min-height: 127px;
+					}
+				}
+			}
+		}
+		div.car-right{
+			@include make-md-column(5);
+			padding: 0 15px;
+			div.top{
+				div.left{
+					@include make-sm-column(8);
+					padding: 0;
+					h1{
+						text-transform: uppercase;
+						font-size: 30px;
+						margin-top: 0;
+						margin-bottom: 15px;
+						color: $saj-yellow;
+						span.annee{
+							color: $saj-turq;
+						}
+					}
+					p.km{
+						color: lightgreen;
+						&:after{
+							content: " KM";
+						}	
+					}
+				}
+				div.right{
+					@include make-sm-column(4);
+					padding: 0;
+					h1{
+						font-size: 32px;
+						margin-top: 0;
+						width: 100%;
+						text-align: right;
+						color: white;
+						&:after{
+							content: " $";
+						}		
+					}
+				}
+			}
+			div.bottom{
+				h4{
+					margin-bottom: 15px;
+					color: $saj-yellow;
+					text-align: center;
+				}
+				ul.options{
+					padding: 0;
+					li{
+						padding: 5px 0;
+						list-style-type: none;
+						span{
+							display: table;
+							font-size: 18px;
+							padding-top: 5px;
+						}
+						&:before{
+							font-family: "FontAwesome";
+							content: "\f061";
+							color: $saj-yellow;
+							font-size: 25px;
+							margin-right: 10px;
+							float: left;
+						}
+					}
+				}
+			}
+		}
+	}
+}

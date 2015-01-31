@@ -3,7 +3,7 @@ section#cars{
 		margin: 0 -7.5px;
 		div.car{
 			@include container-fixed(3);
-			@include make-sm-column(3);
+			@include make-md-column(4);
 			margin-top: 15px;
 			max-height: 304px;
 			overflow: hidden;
@@ -16,12 +16,20 @@ section#cars{
 					top: 0;
 					left: 0;
 					width: 100%;
-					min-height: 100%;
-					background: rgba(205,255,3,0.2);
+					height: 100%;
+					background: rgba(0,0,0,0.5);
 					z-index: 99;
 					&:hover{
 						transition: all 0.25s;
 						opacity: 1;
+					}
+					span{
+						@include vertical-align;
+						display: table;
+						margin: 0 auto;
+						font-size: 12em;
+						color: $saj-yellow;
+						opacity: 0.3;
 					}
 				}
 				div.car-pic{
@@ -43,6 +51,7 @@ section#cars{
 					p{
 						font-size: 18px;
 						color: $saj-turq;
+						margin: 0;
 						&:after{
 							content: " $";
 						}

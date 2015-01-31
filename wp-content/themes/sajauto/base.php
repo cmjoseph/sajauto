@@ -6,6 +6,7 @@
       <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'roots'); ?>
     </div>
   <![endif]-->
+  <div id="preloader"></div>
   <div class="container inner-body">
     <?php
       do_action('get_header');

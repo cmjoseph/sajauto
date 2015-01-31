@@ -32,15 +32,15 @@ var Roots = {
       }
 
       // Get window height with padding
-      get_window_Height(30);
+      // get_window_Height(30);
 
       // Get window height on resize with padding
       $(window).on('resize', function(){ 
         get_window_Height(30);
       });
 
-      // TweenLite.to($("#preloader"), .8,{css:{autoAlpha:0},delay:.4})
-      // TweenLite.set($("#preloader"),{css:{display:"block"},delay:1.1});
+      TweenLite.to($("#preloader"), 0.8,{css:{autoAlpha:0},delay:0.4});
+      TweenLite.set($("#preloader"),{css:{display:"block"},delay:1.1});
 
     }
   },
@@ -80,9 +80,13 @@ var Roots = {
     }
   },
   // About us page, note the change from about-us to about_us.
-  about_us: {
+  single: {
     init: function() {
       // JavaScript to be fired on the about us page
+      $("#carpic-slider").responsiveSlides({
+          manualControls: '#thumbnails',
+          auto: false,
+      });
     }
   }
 };
