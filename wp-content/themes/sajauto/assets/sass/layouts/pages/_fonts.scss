@@ -36,6 +36,22 @@ $gothic:				'CenturyGothicRegular', sans-serif;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Honda:before {
+	content: "\e601";
+}
+
 .icon-Mitsubishi:before {
 	content: "\e600";
+}
+
+.icon-Toyota:before {
+	content: "\e602";
+}
+
+.icon-Subaru:before {
+	content: "\e603";
+}
+
+.icon-Mercedes-Benz:before {
+	content: "\e604";
 }

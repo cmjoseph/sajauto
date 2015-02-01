@@ -4,7 +4,10 @@ Template Name: Contact Template
 */
 ?>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('sajauto/page', 'header'); ?>
-  <?php get_template_part('sajauto/content', 'page'); ?>
-<?php endwhile; ?>
+<section id="contact">
+	<div class="inner">
+		<h2><?php echo roots_title(); ?></h2>
+		
+	</div>
+</section>
+

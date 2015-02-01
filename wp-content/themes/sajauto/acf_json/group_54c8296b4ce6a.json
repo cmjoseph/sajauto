@@ -315,23 +315,6 @@
             ]
         },
         {
-            "key": "field_54c83c7d70b63",
-            "label": "V\u00e9hicule en vedette",
-            "name": "en_vedette",
-            "prefix": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0
-        },
-        {
             "key": "field_54c83caa70b64",
             "label": "V\u00e9hicule vendu",
             "name": "vehicule_vendu",
@@ -366,5 +349,5 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1422678546
+    "modified": 1422733701
 }

@@ -29,6 +29,14 @@ section#intro{
 					}
 					a{
 						display: block;
+						position: relative;
+						img.vendu{
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: 50%;
+							min-height: initial;
+						}
 						img{
 							min-height: 400px;
 							@media #{$mobile}{
@@ -81,12 +89,13 @@ section#nouveau{
 			div.item{
 				position: relative;
 				max-width: 270px;
+				max-height: 184px;
+				overflow: hidden;
 				@media #{$mobile}{
 					max-width: 100%;
 				}
-				max-height: 184px;
-				overflow: hidden;
 				a{
+					position: relative;
 					display: block;
 					max-height: 184px;
 					overflow: hidden;
@@ -94,15 +103,20 @@ section#nouveau{
 						width: 100%;
 						min-height: 184px;
 					}
+					img.vendu{
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 50%;
+						min-height: initial;
+						z-index: 10;
+					}
 				}
 				div.sub-info{
-					@media #{$mobile}{
-						padding: 5px;
-					}
 					position: absolute;
 					bottom: 0;
 					width: 100%;
-					padding: 15px;
+					padding: 5px;
 					background: rgba(17,17,17,0.9);
 				}
 			}

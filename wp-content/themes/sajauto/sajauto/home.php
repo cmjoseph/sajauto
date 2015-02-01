@@ -13,14 +13,24 @@ Template Name: Home Template
 		<div class="right">
 			<ul class="rslides">
 				<?php 
-				global $post; $myposts = get_posts('numberposts=5&category=1&orderby=rand');
+				global $post; $myposts = get_posts('numberposts=-1&category=1&orderby=rand');
 				foreach($myposts as $post) : ?>
 				<li>
 					<?php if (has_post_thumbnail( $post->ID ) ):
 				  	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'desktop' ); ?>
-					<a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image[0]; ?>"></a>
+					<a href="<?php the_permalink(); ?>">
+						<?php if( get_field('vehicule_vendu') ) : ?>
+						<img class="vendu" src="<?php echo get_template_directory_uri(); ?>/assets/img/vendu.png" alt="">
+						<?php endif; ?>
+						<img class="img-responsive" src="<?php echo $image[0]; ?>">
+					</a>
 					<?php else: ?>
-					<a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.jpg"></a>
+					<a href="<?php the_permalink(); ?>">
+						<?php if( get_field('vehicule_vendu') ) : ?>
+						<img class="vendu" src="<?php echo get_template_directory_uri(); ?>/assets/img/vendu.png" alt="">
+						<?php endif; ?>
+						<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.jpg">
+					</a>
 					<?php endif; ?>
 					<p class="caption"><?php the_field('marque'); ?>&nbsp;<?php the_title(); ?>&nbsp;<?php the_field('annee'); ?><span class="pull-right"><?php the_field('prix'); ?></span></p>
 				</li>
@@ -44,9 +54,19 @@ Template Name: Home Template
 					<div class="item">
 						<?php if (has_post_thumbnail( $post->ID ) ):
 					  	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'mobile' ); ?>
-						<a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $image[0]; ?>"></a>
+						<a href="<?php the_permalink(); ?>">
+							<?php if( get_field('vehicule_vendu') ) : ?>
+							<img class="vendu" src="<?php echo get_template_directory_uri(); ?>/assets/img/vendu.png" alt="">
+							<?php endif; ?>
+							<img class="img-responsive" src="<?php echo $image[0]; ?>">
+						</a>
 						<?php else: ?>
-						<a href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.jpg"></a>
+						<a href="<?php the_permalink(); ?>">
+							<?php if( get_field('vehicule_vendu') ) : ?>
+							<img class="vendu" src="<?php echo get_template_directory_uri(); ?>/assets/img/vendu.png" alt="">
+							<?php endif; ?>
+							<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.jpg">
+						</a>
 						<?php endif; ?>
 						<div class="sub-info"><?php the_field('marque'); ?>&nbsp;<?php the_title(); ?>&nbsp;<?php the_field('annee'); ?></div>
 					</div>

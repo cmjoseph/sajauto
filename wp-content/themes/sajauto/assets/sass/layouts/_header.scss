@@ -87,7 +87,8 @@ header.banner{
 								color: black;
 							}
 							&:focus{
-								background: transparent;
+								background: $saj-yellow;
+								color: black;
 							}
 						}
 						&.active{

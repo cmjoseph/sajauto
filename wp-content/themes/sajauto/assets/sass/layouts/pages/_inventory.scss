@@ -2,7 +2,10 @@ section#cars{
 	div.vehicules{
 		margin: 0 -7.5px;
 		div.car{
+			transition: all 0.25s;
 			@include container-fixed(3);
+			@include make-xs-column(12);
+			@include make-sm-column(6);
 			@include make-md-column(4);
 			margin-top: 15px;
 			max-height: 304px;
@@ -27,14 +30,23 @@ section#cars{
 						@include vertical-align;
 						display: table;
 						margin: 0 auto;
-						font-size: 12em;
+						font-size: 8em;
 						color: $saj-yellow;
 						opacity: 0.3;
 					}
 				}
 				div.car-pic{
+					position: relative;
 					overflow: hidden;
 					max-height: 210px;
+					img.vendu{
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 50%;
+						min-height: initial;
+						z-index: 10;
+					}
 					img{
 						min-height: 210px;
 						width: 100%;

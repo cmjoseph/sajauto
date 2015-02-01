@@ -9,3 +9,5 @@
   	</div>
   </div>
 </footer>
+
+<p class="copyrights"><?php echo get_the_date('Y'); ?> @ SAJ AUTO. Tous droits réservés.</p>

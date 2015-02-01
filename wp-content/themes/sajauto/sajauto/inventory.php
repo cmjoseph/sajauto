@@ -12,8 +12,11 @@ Template Name: Inventory Template
 				  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 				  <div class="car">
 					<a class="box" href="<?php the_permalink(); ?>">
-						<div class="cover"><span class="icon-Mitsubishi"></span></div>
+						<div class="cover"><span class="icon-<?php the_field('marque'); ?>"></span></div>
 						<div class="car-pic clearfix">
+							<?php if( get_field('vehicule_vendu') ) : ?>
+							<img class="vendu" src="<?php echo get_template_directory_uri(); ?>/assets/img/vendu.png" alt="">
+							<?php endif; ?>
 							<img class="img-responsive" src="<?php echo $image[0]; ?>" alt="">
 						</div>
 					  	<div class="caption">
