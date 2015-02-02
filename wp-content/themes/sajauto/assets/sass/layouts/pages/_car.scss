@@ -31,6 +31,9 @@ section#vehicule{
 					}
 					img{
 						min-height: 127px;
+						@media #{$mobile}{
+							min-height: 73px;
+						}
 					}
 				}
 			}
@@ -91,6 +94,7 @@ section#vehicule{
 				}
 			}
 			div.bottom{
+				border-bottom: 1px solid $saj-yellow;
 				div.top-list{
 					border-bottom: 1px solid $saj-yellow;
 					border-top: 1px solid $saj-yellow;

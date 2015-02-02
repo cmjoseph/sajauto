@@ -9,7 +9,7 @@
             "prefix": "",
             "type": "image_crop",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -374,5 +374,5 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1422832785
+    "modified": 1422849463
 }

@@ -1,9 +1,7 @@
 <section id="vehicule">
     <div class="inner clearfix">
         <?php while (have_posts()) : the_post(); ?>
-            <?php 
-            $imageMain = get_field('image_principale_du_vehicule');
-            if( !empty($imageMain) ): ?>
+            <?php $imageMain = get_field('image_principale_du_vehicule'); ?>
                 <article <?php post_class(); ?> data-type="<?php the_field('marque'); ?>">
                     <div class="car-left">
                         <?php if( get_field('vehicule_vendu') ) : ?>
@@ -11,7 +9,11 @@
                         <?php endif; ?>
                         <ul class="rslides" id="carpic-slider">
                             <li>
+                            <?php if( !empty($imageMain) ): ?>
                                 <img class="img-responsive" src="<?php echo $imageMain['url']; ?>" alt="<?php echo $imageMain['alt']; ?>" />
+                            <?php else: ?>
+                                <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.jpg">
+                            <?php endif; ?>
                             </li>
                             <?php if( have_rows('images_du_vehicule') ): ?>
                             <?php while( have_rows('images_du_vehicule') ): the_row();
@@ -27,7 +29,11 @@
                         <!-- Pager -->
                         <ul class="thumbnails clearfix" id="thumbnails"> <!--this id gets inserted in manualControls -->
                             <li>
+                            <?php if( !empty($imageMain) ): ?>
                                 <a href="#"><img class="img-responsive" src="<?php echo $imageMain['url']; ?>" alt="<?php echo $imageMain['alt']; ?>" /></a>
+                            <?php else: ?>
+                                <a href="#"><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.jpg"></a>
+                            <?php endif; ?>
                             </li>
                             <?php if( have_rows('images_du_vehicule') ): ?>
                             <?php while( have_rows('images_du_vehicule') ): the_row();
@@ -88,7 +94,6 @@
                         </div>
                     </div>
                 </article>
-            <?php endif; ?>
         <?php endwhile; ?> 
     </div>
 </section>

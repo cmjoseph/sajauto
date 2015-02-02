@@ -12,7 +12,9 @@ section#contact{
 		div#map-canvas{
 			width: 100%;
 			height: 400px;
-			// display: none;
+			@media #{$mobile}{
+				height: 200px;
+			}
 		}
 	}
 	div.bottom{
@@ -68,8 +70,11 @@ section#contact{
 					}
 				}
 				span.wpcf7-not-valid-tip{
+					@media #{$desktop}{
+						font-size: 18px;
+					}
 					margin-top: 10px;
-					font-size: 18px;
+					font-size: 15px;
 					color: rgb(244, 67, 67);
 				}
 				div.wpcf7-response-output{
