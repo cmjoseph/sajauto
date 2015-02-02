@@ -88,6 +88,71 @@ var Roots = {
           auto: false,
       });
     }
+  },
+
+  contact: {
+    init: function() {
+      // JavaScript to be fired on the about us page
+      var sajauto = new google.maps.LatLng(45.70431, -73.63014);
+      var marker;
+      var map;
+
+      function initialize() {
+        var mapOptions = {
+          zoom: 15,
+          // mapTypeId: google.maps.MapTypeId.ROADMAP
+          center: sajauto,
+        };
+
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var iconSAJ = '../wp-content/themes/sajauto/assets/img/saj_icon.png';
+
+        marker = new google.maps.Marker({
+          map: map,
+          animation: google.maps.Animation.DROP,
+          icon: iconSAJ,
+          position: sajauto
+        });
+        google.maps.event.addListener(marker, 'mouseover', toggleBounce);
+
+        // map.set('styles', [
+        //   {
+        //     featureType: 'road',
+        //     elementType: 'geometry',
+        //     stylers: [
+        //       { color: '#000000' },
+        //       { weight: 1.6 }
+        //     ]
+        //   }, {
+        //     featureType: 'road',
+        //     elementType: 'labels',
+        //     stylers: [
+        //       { saturation: 0 },
+        //       { invert_lightness: true }
+        //     ]
+        //   }, {
+        //     featureType: 'landscape',
+        //     stylers: [
+        //       { color: '#cbff08' },
+        //     ]
+        //   }
+        // ]);
+
+      }
+
+      function toggleBounce() {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+
+      // Keep location centered on resize
+      google.maps.event.addDomListener(window, 'resize', function() {
+          map.setCenter(sajauto);
+      });
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    }
   }
 };
 

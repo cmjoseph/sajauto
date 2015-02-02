@@ -38,7 +38,7 @@ section#cars{
 				div.car-pic{
 					position: relative;
 					overflow: hidden;
-					max-height: 210px;
+					max-height: 195px;
 					img.vendu{
 						position: absolute;
 						top: 0;
@@ -48,7 +48,7 @@ section#cars{
 						z-index: 10;
 					}
 					img{
-						min-height: 210px;
+						min-height: 195px;
 						width: 100%;
 					}
 				}

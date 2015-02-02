@@ -16,13 +16,14 @@ Template Name: Home Template
 				global $post; $myposts = get_posts('numberposts=-1&category=1&orderby=rand');
 				foreach($myposts as $post) : ?>
 				<li>
-					<?php if (has_post_thumbnail( $post->ID ) ):
-				  	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'desktop' ); ?>
+					<?php 
+					$imageMain = get_field('image_principale_du_vehicule');
+					if( !empty($imageMain) ): ?>
 					<a href="<?php the_permalink(); ?>">
 						<?php if( get_field('vehicule_vendu') ) : ?>
 						<img class="vendu" src="<?php echo get_template_directory_uri(); ?>/assets/img/vendu.png" alt="">
 						<?php endif; ?>
-						<img class="img-responsive" src="<?php echo $image[0]; ?>">
+						<img class="img-responsive" src="<?php echo $imageMain['url']; ?>" alt="<?php echo $imageMain['alt']; ?>" />
 					</a>
 					<?php else: ?>
 					<a href="<?php the_permalink(); ?>">
@@ -52,13 +53,14 @@ Template Name: Home Template
 			foreach($myposts as $post) : ?>
 				<div class="box">
 					<div class="item">
-						<?php if (has_post_thumbnail( $post->ID ) ):
-					  	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'mobile' ); ?>
+						<?php 
+						$imageMain = get_field('image_principale_du_vehicule');
+						if( !empty($imageMain) ): ?>
 						<a href="<?php the_permalink(); ?>">
 							<?php if( get_field('vehicule_vendu') ) : ?>
 							<img class="vendu" src="<?php echo get_template_directory_uri(); ?>/assets/img/vendu.png" alt="">
 							<?php endif; ?>
-							<img class="img-responsive" src="<?php echo $image[0]; ?>">
+							<img class="img-responsive" src="<?php echo $imageMain['url']; ?>" alt="<?php echo $imageMain['alt']; ?>" />
 						</a>
 						<?php else: ?>
 						<a href="<?php the_permalink(); ?>">

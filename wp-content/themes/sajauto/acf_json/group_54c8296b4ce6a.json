@@ -3,8 +3,33 @@
     "title": "Inventaire",
     "fields": [
         {
+            "key": "field_54ceb0fda2ac1",
+            "label": "Image principale du v\u00e9hicule",
+            "name": "image_principale_du_vehicule",
+            "prefix": "",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "hard",
+            "target_size": "desktop",
+            "width": "",
+            "height": "",
+            "preview_size": "medium",
+            "force_crop": "yes",
+            "save_in_media_library": "yes",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
             "key": "field_54c83955472fe",
-            "label": "Images du v\u00e9hicule",
+            "label": "Images secondaires du v\u00e9hicule",
             "name": "images_du_vehicule",
             "prefix": "",
             "type": "repeater",
@@ -39,8 +64,8 @@
                     "target_size": "desktop",
                     "width": "",
                     "height": "",
-                    "preview_size": "medium",
-                    "force_crop": "no",
+                    "preview_size": "thumbnail",
+                    "force_crop": "yes",
                     "save_in_media_library": "yes",
                     "retina_mode": "no",
                     "save_format": "object",
@@ -349,5 +374,5 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1422733701
+    "modified": 1422832785
 }

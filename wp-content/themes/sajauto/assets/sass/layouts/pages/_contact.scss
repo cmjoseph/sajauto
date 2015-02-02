@@ -1,0 +1,81 @@
+section#contact{
+	div.top{
+		a.address{
+			display: block;
+			margin: 15px 0;
+			color: white;
+			transition: all 0.25s;
+			&:hover{
+				color: $saj-turq;
+			}
+		}
+		div#map-canvas{
+			width: 100%;
+			height: 400px;
+			// display: none;
+		}
+	}
+	div.bottom{
+		h2{
+			margin: 15px 0;
+			text-align: center;
+		}
+		div.form{
+			@media #{$desktop}{
+				width: 50%;
+			}
+			width: 100%;
+			margin: 0 auto;
+			display: table;
+			form{
+				input, textarea{
+					color: white;
+					width: 100%;
+					border: 1px solid $saj-yellow;
+					background-color: transparent;
+					padding: 10px;
+				}
+				label{
+					@media #{$desktop}{
+						font-size: 22px;
+					}
+					font-size: 15px;
+					color: $saj-yellow;
+					margin-bottom: 10px;
+					font-weight: normal;
+				}
+				input[type="file" i]::-webkit-file-upload-button{
+					background-color: transparent;
+					color: $saj-yellow;
+				}
+				input{
+					height: 30px;
+					&[type="file"]{
+						border: none;
+						padding: 0;
+					}
+					&[type="submit"]{
+						color: black;
+						background: $saj-yellow;
+						height: 50px;
+						border: none;
+						text-transform: uppercase;
+						font-weight: bold;
+						transition: all 0.25s;
+						&:hover{
+							background: $saj-turq;
+						}
+					}
+				}
+				span.wpcf7-not-valid-tip{
+					margin-top: 10px;
+					font-size: 18px;
+					color: rgb(244, 67, 67);
+				}
+				div.wpcf7-response-output{
+					margin: 0;
+				}
+			}
+		}
+	}
+}

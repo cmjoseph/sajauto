@@ -1,8 +1,9 @@
 <section id="vehicule">
     <div class="inner clearfix">
         <?php while (have_posts()) : the_post(); ?>
-            <?php if (has_post_thumbnail( $post->ID ) ):
-            $MainImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+            <?php 
+            $imageMain = get_field('image_principale_du_vehicule');
+            if( !empty($imageMain) ): ?>
                 <article <?php post_class(); ?> data-type="<?php the_field('marque'); ?>">
                     <div class="car-left">
                         <?php if( get_field('vehicule_vendu') ) : ?>
@@ -10,7 +11,7 @@
                         <?php endif; ?>
                         <ul class="rslides" id="carpic-slider">
                             <li>
-                                <img class="img-responsive" src="<?php echo $MainImage[0]; ?>" alt="">
+                                <img class="img-responsive" src="<?php echo $imageMain['url']; ?>" alt="<?php echo $imageMain['alt']; ?>" />
                             </li>
                             <?php if( have_rows('images_du_vehicule') ): ?>
                             <?php while( have_rows('images_du_vehicule') ): the_row();
@@ -26,7 +27,7 @@
                         <!-- Pager -->
                         <ul class="thumbnails clearfix" id="thumbnails"> <!--this id gets inserted in manualControls -->
                             <li>
-                                <a href="#"><img class="img-responsive" src="<?php echo $MainImage[0]; ?>" alt=""></a>
+                                <a href="#"><img class="img-responsive" src="<?php echo $imageMain['url']; ?>" alt="<?php echo $imageMain['alt']; ?>" /></a>
                             </li>
                             <?php if( have_rows('images_du_vehicule') ): ?>
                             <?php while( have_rows('images_du_vehicule') ): the_row();

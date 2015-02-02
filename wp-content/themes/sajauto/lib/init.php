@@ -60,5 +60,15 @@ function roots_widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>',
   ));
+
+  register_sidebar(array(
+    'name'          => __('Contact Form', 'roots'),
+    'id'            => 'form',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
 }
 add_action('widgets_init', 'roots_widgets_init');
