@@ -33,6 +33,9 @@ header.banner{
 				@media #{$mobile}{
 					margin-bottom: 5px;
 				}
+				@media #{$tablet}{
+					font-size: 32px;
+				}
 			}
 			a.number{
 				display: inline-block;

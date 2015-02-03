@@ -9,6 +9,7 @@ Template Name: Home Template
 	<div class="inner clearfix">
 		<div class="left hidden-xs">
 			<?php the_content() ?>
+			<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.sajauto.com%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=1446068852272739" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
 		</div>
 		<div class="right">
 			<ul class="rslides">

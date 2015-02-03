@@ -372,7 +372,11 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content"
+        "the_content",
+        "format",
+        "featured_image",
+        "categories",
+        "tags"
     ],
-    "modified": 1422849463
+    "modified": 1422851710
 }

@@ -9,13 +9,6 @@
   <meta name="keywords" content="Saj auto, auto usagées, automobile, vente, voiture, service, accueil" />
   <meta name="viewport" content="width=device-width">
   <meta name="author" content="Jean Harmel Joseph" />
-  <!-- for Facebook -->          
-  <meta property="og:title" content="Saj Auto" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/share.png" />
-  <meta property="og:url" content="http://www.sajauto.com" />
-  <meta property="og:description" content="Saj auto, auto usagées, automobile, vente, voiture, service, accueil" />
-
   <?php wp_head(); ?>
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">

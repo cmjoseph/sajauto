@@ -13,6 +13,13 @@ section#intro{
 					font-size: 20px;
 				}
 			}
+			iframe{
+				margin-top: 40px;
+				@media #{$tablet}{
+					margin-top: 0;
+					margin-bottom: 15px;
+				}
+			}
 		}
 		div.right{
 			@include make-md-column(8);
