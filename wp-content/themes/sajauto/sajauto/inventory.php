@@ -8,10 +8,11 @@ Template Name: Inventory Template
 <h2><?php echo roots_title(); ?></h2>
 <?php dynamic_sidebar('search-car'); ?>
 <div class="vehicules">
-	<?php while (have_posts()) : the_post(); ?>
+	<?php while (have_posts()) : the_post();
+		$marque = strtolower(get_field('marque')); ?>
 		<div class="car">
 			<a class="box" href="<?php the_permalink(); ?>">
-				<div class="cover"><span class="icon-<?php the_field('marque'); ?>"></span></div>
+				<div class="cover"><span class="icon-<?php echo $marque; ?>"></span></div>
 				<?php 
 				$imageMain = get_field('image_principale_du_vehicule');
 				if( !empty($imageMain) ): ?>

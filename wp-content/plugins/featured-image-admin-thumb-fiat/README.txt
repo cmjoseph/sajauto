@@ -3,8 +3,8 @@ Contributors: seanchayes
 Donate link: http://www.seanhayes.biz/
 Tags: thumbnail, admin, image, featured, featured image, featured thumbnail
 Requires at least: 3.5.1
-Tested up to: 4.0
-Stable tag: 1.3.1
+Tested up to: 4.2-alpha
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,13 @@ After checking that the plugin is enabled, be sure to click Screen Options if yo
 3. Shows the change icon located next to a featured image/thumb indicating it can be changed inline without having to edit the content item first
 
 == Changelog ==
+= 1.3.3 (2015-02-04) =
+Additional excluded post type
+Markup and JS to support showing the selected thumbnail in the media uploader
+
+= 1.3.2 (2015-02-04) =
+Minor improvement to code that attaches FIAT column handler to Posts, Pages and other taxonomy screens
+Inclusion of fix from [here:](https://wordpress.org/support/topic/would-like-to-see-media-category-sort) that allows filters from other plugins to work
 
 = 1.3.1 (2014-07-24) =
 Adding in missing Genericons.

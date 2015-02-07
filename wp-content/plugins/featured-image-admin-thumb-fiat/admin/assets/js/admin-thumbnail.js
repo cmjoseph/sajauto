@@ -20,6 +20,7 @@
         event.preventDefault();
 
         var that    = this.href;
+        var thumb_id = this.dataset.thumbnailId;
         // get post id to assign thumbnail to
         var post_id = FIATparseUrl(that).params.post_id;
         var type    = FIATparseUrl(that).params.type;
@@ -30,7 +31,7 @@
         if (typeof(thumbnail_upload_frame)!=="undefined") {
             thumbnail_upload_frame.close();
         }
-        // Set the title and expected images to use in the dialoa
+        // Set the title and expected images to use in the dialog
         thumbnail_upload_frame = wp.media.frames.customHeader = wp.media({
             //Title of media manager frame
             title: "Featured Image Admin Thumb",
@@ -41,12 +42,23 @@
                 //Button text
                 text: "Use as thumbnail"
             },
-            //Do not allow multiple files, if you want multiple, set true
-            multiple: false
+            states: [
+                new wp.media.controller.Library({
+                    library:   wp.media.query({ type: 'image' }),
+                    multiple:  false, // do not allow multiple files, if you want multiple, set true
+                    filterable: 'all' // turn on filters
+                })
+            ]
         });
         // Set the post id we would like the thumbnail assigned to
         wp.media.model.settings.post.id = post_id;
 
+        thumbnail_upload_frame.on('open', function() {
+            var selection = thumbnail_upload_frame.state().get('selection');
+            var selected_thumb = wp.media.attachment(thumb_id);
+            selected_thumb.fetch();
+            selection.add([selected_thumb]);
+        });
         //callback for selected image when the "Use as thumbnail" is clicked
         thumbnail_upload_frame.on('select', function() {
             var attachment = thumbnail_upload_frame.state().get('selection').first().toJSON();

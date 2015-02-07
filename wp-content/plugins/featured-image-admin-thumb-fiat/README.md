@@ -50,6 +50,13 @@ After checking that the plugin is enabled, be sure to click Screen Options if yo
 2. If the column is not showing in your All Posts/Pages view this shows you where you can check to see that the "Thumb" column is selected to be displayed
 
 ###Changelog
+= 1.3.3 (2015-02-04) =
+Additional excluded post type
+Markup and JS to support showing the selected thumbnail in the media uploader
+
+= 1.3.2 (2015-02-04) =
+Minor improvement to code that attaches FIAT column handler to Posts, Pages and other taxonomy screens
+Inclusion of fix from [here:](https://wordpress.org/support/topic/would-like-to-see-media-category-sort) that allows filters from other plugins to work
 
 = 1.3.1 (2014-07-24) =
 Adding in missing Genericons.
